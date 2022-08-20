@@ -96,8 +96,8 @@ export class HeaderComponent extends DestroySubscription implements OnInit, Afte
 
   // @ts-ignore
   ngOnDestroy(): void {
-    this.document.body.removeEventListener('touchstart', () => {});
-    this.document.body.removeEventListener('touchmove', () => {});
+    this.document.body.removeEventListener('touchstart', () => { });
+    this.document.body.removeEventListener('touchmove', () => { });
   }
 
   get userInfo() {
@@ -116,7 +116,7 @@ export class HeaderComponent extends DestroySubscription implements OnInit, Afte
     } else {
       this.html5QrcodeScanner.render(
         () => this.onSuccessQRScan(),
-        () => {}
+        () => { }
       );
       this.document.body.classList.add('stop-scroll');
       this.isQrcodeScannerRendered = true;
